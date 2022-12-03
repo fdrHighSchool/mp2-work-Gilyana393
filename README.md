@@ -2,9 +2,9 @@
 ## fall22-mp2-work
 
 
-### Last Name:  
-### First Name:
-### GitHub Username:
+### Last Name:  Dorzhieva
+### First Name: Gilyana
+### GitHub Username: Gilyana393
 
 ---
 #### General Workflow:
