@@ -1,0 +1,18 @@
+class Main {
+  public static void main(String[] args) {
+    System.out.println(FizzBuzz(12));
+    System.out.println(FizzBuzz(15));
+    System.out.println(FizzBuzz(7));
+  }
+  public static String FizzBuzz(int n) {
+    if (n % 3 == 0 && n % 5 != 0) { // check the case when n is div by 3 and not div by 5
+      return "Fizz"; 
+    } else if (n % 3 != 0 && n % 5 == 0) { // check the case when n is div by 5 and not 3
+      return "Buzz";
+    } else if (n % 3 == 0 && n % 5 == 0) { // check when n is div by both 3 and 5
+      return "FizzBuzz";
+    } else { // in other cases return n
+      return String.valueOf(n);
+    }
+  }
+}
