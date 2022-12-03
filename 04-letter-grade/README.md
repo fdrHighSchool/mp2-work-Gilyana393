@@ -6,11 +6,12 @@
   * Attach a "-" on their grade if the grade ends in a 0, 1 or 2 (eg: 92 -> A-, 61 -> D-)
 
     * **YOUR WRITING HERE**
-
+for each grade write if statements, then check if the grade in number ends with particular digits and depending on that add + or -
 
 2. Discuss how you would make sure 100 is not misrepresented as an A-.
   * **YOUR WRITING HERE**
-
+in if statement for adding "+" to letter grade, use ||(OR) logic operator to add condition for grade that equals 100
 
 3. Discuss how you would make sure grades that are an F are not mislabeled as F- or F+ (eg: 49 -> F+ and 52 -> F-)
   * **YOUR WRITING HERE**
+  in if statement for adding "-" to letter grade, use &&(AND) logic operator to add condition for grade<60
