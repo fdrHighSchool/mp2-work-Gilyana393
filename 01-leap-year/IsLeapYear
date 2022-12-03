@@ -1,0 +1,14 @@
+class Main {
+  public static void main(String[] args) {
+    System.out.println(isLeapYear(2004));
+    System.out.println(isLeapYear(2000));
+    System.out.println(isLeapYear(2008));
+    System.out.println(isLeapYear(1997));
+  }
+
+  public static boolean isLeapYear(int year) {
+    return ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0));
+    // in 1st condition we check if the year is divisible by 4, 100 and 400, but we can only check for division by 400 - if so, leap year
+    // in 2nd condition we check if the year is divisible by 4 and not 100 - if so, leap year
+  }
+}
