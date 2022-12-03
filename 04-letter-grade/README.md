@@ -14,4 +14,4 @@ in if statement for adding "+" to letter grade, use ||(OR) logic operator to add
 
 3. Discuss how you would make sure grades that are an F are not mislabeled as F- or F+ (eg: 49 -> F+ and 52 -> F-)
   * **YOUR WRITING HERE**
-  in if statement for adding "-" to letter grade, use &&(AND) logic operator to add condition for grade<60
+  in if statement for adding "-" and "+" to letter grade, use &&(AND) logic operator to add condition for grade to be >60
