@@ -1,0 +1,57 @@
+class Main {
+  public static void main(String[] args) {
+    // System.out.println(firstHalf("WooHoo"));
+    // System.out.println(repeatStr("Hello", 3));
+    System.out.println(withoutString("Hello there", "llo"));
+  }
+
+  public static String firstHalf(String s) {
+    int n = s.length(); // find length of n
+    return s.substring(0, n / 2); // substring of first half 
+  }
+
+  public static String repeatEnd(String s, int n) {
+    int l = s.length();
+    String ss = s.substring(l - n, l); // ss is the string of n last characters
+    String ans = ""; // variable that will contain answer
+    for (int i = 0; i < n; i++) { // for loop that will add ss n times
+      ans += ss;
+    }
+    return ans; // return answer
+  }
+
+  public static int countHi(String s) {
+    int k = 0; // variable that will contain the number of times "hi" will appear
+    for (int  i = 0; i < s.length() - 1; i++) { // for loop to go through all string characters 
+  // except for last one because it will be out of boundaries
+      if (s.substring(i, i + 2).equals("hi")) { // if string of length 2 equals "hi"
+        k++; // add 1 to k
+      } 
+    }
+    return k; // return number of times "hi" appeared in s
+  }
+
+  public static String withoutString(String base, String remove) 
+  // the idea is that we are not removing the remove string from base, but just not adding it to the answer string variable, by checking if the substring equals to remove string
+  // we create variable k that will contain the index of last character that we checked, we will check if i > k, so that we don't remove overlapping instances, if i < k, we just add the character of base at index i to answer variable
+    int k = 0, b = base.length(), r = remove.length(); // length of remove, base strings; k = 0 so that from the start we can check substring == remove
+    String ans = ""; // answer var
+    for (int i = 0; i <= b - r; i++) { // i <= b - r to avoid out of boundaries error
+      if (i >= k) { // if i is > that the last index of character we checked that equals remove str
+        if (base.substring(i, i + r).equals(remove)) {
+          k = i + r; // k contains last index of substring we checked that equals remove str
+        } else {
+          ans += base.substring(i, i + 1); // else just add base(i) to answer
+       }
+     } 
+     return ans + base.substring(b - r + 1, b); // remember that our for loop didn't check last r characters of base, so we need to add them to final answer
+  }  
+  public static int sumDigits(String s) {
+    int sum = 0; // var that keeps sum of digits
+    for (int i = 0; i < s.length(); i++) { // for loop goes through each char of the s string
+      if (Character.isDigit(s.charAt(i))) { // check if char at i index of s is a digit
+        sum += Integer.parseInt(s.substring(i, i + 1)); // add to sum the digit at i index
+      }
+    return sum; // return sum of digits
+    }
+  }
