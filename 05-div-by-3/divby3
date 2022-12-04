@@ -1,0 +1,16 @@
+class Main {
+  public static void main(String[] args) {
+    System.out.println(divBy3(1010104));
+  }
+
+  public static boolean divBy3(int n) {
+    String s = ""  + n;
+    int len = s.length(); // find length of n
+    int sum = 0; // variable where we keep the sum of digits of n
+    for (int i = 0; i < len; i++) { // loop to find eac digit of a number
+      sum += (n % 10); 
+      n = n / 10;
+    }
+    return (sum % 3 == 0); // return true or false if n % 3 == 0
+  }
+}
