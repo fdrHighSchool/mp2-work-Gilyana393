@@ -7,3 +7,6 @@ Think of the following method header:
 `public static boolean isPrime(int num)`
 
   * **YOUR WRITING HERE**
+1. make for loop from 2 to n/2 including
+2.for each i check if n % i == 0
+3. if yes, break the loop and stop, return false, else, return true
